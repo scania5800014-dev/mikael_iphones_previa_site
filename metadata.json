@@ -1,0 +1,6 @@
+{
+  "name": "Mikael Iphones - Santa Maria RS",
+  "description": "Mikael Iphones: Sua loja de confiança para iPhones novos e seminovos em Santa Maria, RS. Qualidade garantida, assistência técnica e os melhores preços.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
