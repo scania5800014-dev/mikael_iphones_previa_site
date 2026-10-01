@@ -21,9 +21,10 @@ export const STORE_INFO = {
 export const NAV_LINKS: NavItem[] = [
   { label: 'Início', href: '#hero' },
   { label: 'Sobre Nós', href: '#sobre-nos' },
-  { label: 'Diferenciais', href: '#diferenciais' },
   { label: 'Catálogo', href: '#catalogo' },
+  { label: 'Diferenciais', href: '#diferenciais' },
   { label: 'Serviços & Vídeos', href: '#servicos-videos' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contato', href: '#contato' },
 ];
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { DETAILED_PRODUCTS, FAQ_ITEMS, STORE_INFO } from '../data/mockData';
-import { Smartphone, BatteryCharging, Shield, MessageSquare, ChevronDown } from 'lucide-react';
+import { DETAILED_PRODUCTS, STORE_INFO } from '../data/mockData';
+import { Smartphone, BatteryCharging, Shield, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Catalogo: React.FC = () => {
@@ -8,7 +8,6 @@ export const Catalogo: React.FC = () => {
   const [selectedProductIndex, setSelectedProductIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(0);
   const [selectedStorage, setSelectedStorage] = useState('256GB');
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const filteredProducts = DETAILED_PRODUCTS.filter((product) => {
     if (selectedFilter === 'all') return true;
@@ -288,46 +287,6 @@ export const Catalogo: React.FC = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Dynamic Apple FAQ Accordion */}
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-              Perguntas Frequentes sobre Compra e Troca
-            </h3>
-            <p className="text-xs text-zinc-400">Respostas diretas para dúvidas comuns de nossos clientes em Santa Maria - RS.</p>
-          </div>
-
-          <div className="space-y-3">
-            {FAQ_ITEMS.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="apple-glass-card rounded-2xl overflow-hidden transition-colors"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
-                  aria-expanded={openFaq === index}
-                >
-                  <span className="text-sm sm:text-base font-semibold text-white">
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-zinc-400 transition-transform duration-300 flex-shrink-0 ${
-                      openFaq === index ? 'rotate-180 text-white' : ''
-                    }`}
-                  />
-                </button>
-                {openFaq === index && (
-                  <div className="px-5 pb-5 pt-1 border-t border-zinc-800/80 text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>

@@ -6,6 +6,7 @@ import { SobreNos } from './components/SobreNos';
 import { Diferenciais } from './components/Diferenciais';
 import { Catalogo } from './components/Catalogo';
 import { ServicosVideos } from './components/ServicosVideos';
+import { Faq } from './components/Faq';
 import { Contato } from './components/Contato';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -49,17 +50,7 @@ export default function App() {
           <SobreNos />
         </motion.div>
 
-        {/* Diferenciais */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={sectionVariants}
-        >
-          <Diferenciais />
-        </motion.div>
-
-        {/* Catálogo com Estúdio Interativo */}
+        {/* Catálogo com Estúdio Interativo e Destaque iPhone 18 Pro Max */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -67,6 +58,16 @@ export default function App() {
           variants={sectionVariants}
         >
           <Catalogo />
+        </motion.div>
+
+        {/* Diferenciais (Por Que Comprar com a Mikael Iphones) */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={sectionVariants}
+        >
+          <Diferenciais />
         </motion.div>
 
         {/* Serviços & Vídeos */}
@@ -79,7 +80,17 @@ export default function App() {
           <ServicosVideos />
         </motion.div>
 
-        {/* Contato & Localização */}
+        {/* Perguntas Frequentes (FAQ) - Acima do Fale Conosco */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={sectionVariants}
+        >
+          <Faq />
+        </motion.div>
+
+        {/* Contato & Localização ("Fale Conosco") */}
         <motion.div
           initial="hidden"
           whileInView="visible"
