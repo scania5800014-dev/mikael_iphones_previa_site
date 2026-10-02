@@ -60,7 +60,7 @@ export default function App() {
           <Catalogo />
         </motion.div>
 
-        {/* Diferenciais (Por Que Comprar com a Mikael Iphones) */}
+        {/* Diferenciais (Por Que Comprar com o Mikael Iphones) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
